@@ -8,30 +8,13 @@
   <form action="/tasks" method="post">
     <div class="form-group">
       <input id='contact-id' name='contact-id' type='hidden' value='@Model["contact"].GetId()'>
-      <label for='Address'>Address</label>
-      <input id='Address' name='Address' type='text' class="form-control">
+        <label for='Address'>Address</label>
+        <input id='Address' name="Address" type='text' class="form-control">
+        <br><br>
       <input id='contact-id' name='contact-id' type='hidden' value='@Model["contact"].GetId()'>
       <label for='Phone-Number'>Phone Number</label>
-      <input id='Phone-Number' name='Phone-Number' type='text'
+      <input id='Phone-Number' name="Phone-Number" type='text'
     </div>
     <button type="submit" class="btn btn-info">Add task</button>
   </form>
 </div>
-
-
-
-<!-- @{
-Layout="Shared/_Layout.cshtml";
-}
-
-<div class="container text-center">
-<h1>Add a new to @Model["contact"].GetName()</h1>
-<form action="/tasks" method="post">
-<div class="form-group">
-<input id="contact-id" type="hidden" name="contact=id" value='@Model["contact"].GetId()'>
-<label for="task-description">Task Description</label>
-<input id="task-description" type="text" name="task-description" class="form-control">
-<button type="submit" class="btn btn-info">Add Task</button>
-</div>
-</form>
-</div> -->

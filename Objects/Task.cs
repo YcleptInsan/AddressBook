@@ -24,7 +24,22 @@ namespace AddressBook
     {
       return _description;
     }
-
+    public string GetAddress()
+    {
+      return _address;
+    }
+    public void SetAddress(string newAddress)
+    {
+      _address = newAddress;
+    }
+    public string GetPhonenumber()
+    {
+      return _phoneNumber;
+    }
+    public void SetPhoneNumber(string newPhoneNumber)
+    {
+      _phoneNumber = newPhoneNumber;
+    }
     public int GetId()
     {
       return _id;
