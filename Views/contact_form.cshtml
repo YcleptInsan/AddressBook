@@ -1,0 +1,16 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="container text-center">
+  <h1>Address Book</h1>
+  <p>Add a contact here</p>
+  <form  action="/contacts" method="post">
+    <div class="form-group">
+      <label for="contact-name">Contact name:</label>
+      <input type="text" name="contact-name" id="contact-name" class="form-control">
+      <button type="subnit" class="btn btn-info">Add</button>
+    </div>
+  </form>
+  <p><a href="/">Home</a></p>
+</div>

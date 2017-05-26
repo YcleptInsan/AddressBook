@@ -1,0 +1,23 @@
+@{
+  Layout = "Shared/_Layout.cshtml";
+}
+
+<div class="container text-center">
+  <h3>Here are all the tasks in this contact:</h3>
+  @foreach(var task in @Model["tasks"])
+  {
+    @if(@task.GetExistence())
+    {
+      <h5>@task.GetDescription()</h5>
+      <h5>@task.GetAddress()</h5>
+      <h5>@task.GetPhoneNumber()</h5>
+      <form action="/tasks/update" method="post">
+        <input id='task-id' name='task-id' type='hidden' value='@task.GetId()'>
+        <input id='contact-id' name='contact-id' type='hidden' value='@Model["contact"].GetId()'>
+        <button type="submit" class="btn btn-danger">Delete task #@task.GetId()</button>
+      </form>
+    }
+  }
+  <p><a href="/categories/@Model["contact"].GetId()/contacts/new">Click here to add an Address and Phonenumber for this person</a></p>
+  <p><a href="/">Home</a></p>
+</div>

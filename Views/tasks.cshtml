@@ -1,0 +1,15 @@
+@{
+  Layout="Shared/_Layout";
+}
+
+<div class="container text-center">
+  <h1 class="landing-header">&#128293 Your To Do List! &#128169</h1>
+    @foreach(var task in Model)
+    {
+      <li><a href = '/tasks/@task.GetId()'>@task.GetDescription()</a></li>
+    }
+  <p><a href="/tasks/new">Add another task</a></p>
+  <form action="/tasks/cleared" method="post">
+    <button type="submit" class="btn btn-info">Clear all tasks</button>
+  </form>
+</div>

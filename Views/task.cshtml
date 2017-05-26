@@ -1,0 +1,10 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="container text-center">
+  <h1 class="landing-header">&#128293 To Do List &#128169</h1>
+  <h3>@Model.GetDescription()</h3>
+  <p><a href='/tasks/new'>Add another task</a></p>
+  <p><a href='/tasks'>View all tasks</a></p>
+</div>
